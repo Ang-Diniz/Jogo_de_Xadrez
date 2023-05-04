@@ -1,7 +1,7 @@
 ﻿using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
-namespace Tabuleiro
+namespace tabuleiro
 {
     class Posicao
     {
@@ -18,6 +18,5 @@ namespace Tabuleiro
             return linha + ", " + coluna;
         }
     }
-
 }
 
