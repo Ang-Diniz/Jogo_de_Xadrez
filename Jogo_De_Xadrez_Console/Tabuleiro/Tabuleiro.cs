@@ -22,7 +22,7 @@
             return pecas[posicao.linha, posicao.coluna];
         }
 
-        public bool existePeca (Posicao posicao)
+        public bool existePeca(Posicao posicao)
         {
             validarPosicao(posicao);
             return peca(posicao) != null;
@@ -30,7 +30,7 @@
 
         public void colocarPeca(Peca p, Posicao posicao)
         {
-            if(existePeca(posicao))
+            if (existePeca(posicao))
             {
                 throw new TabuleiroException("Já existe uma peça nessa posição");
             }
