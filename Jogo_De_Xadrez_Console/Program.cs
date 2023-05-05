@@ -18,8 +18,14 @@ namespace Jogo_De_Xadrez_Console
                     Console.Clear();
                     Tela.imprimirTabuleiro(partida.tab);
 
-                    Console.Write("\nDigite a posição da peça que você quer mover: ");
+                    Console.Write("\nDigite a posição de origem da peça que você quer mover: ");
                     Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
+
+                    bool[,] posicoesPossiveis = partida.tab.peca(origem).movimentosPossiveis();
+
+                    Console.Clear();
+                    Tela.imprimirTabuleiro(partida.tab, posicoesPossiveis);
+
                     Console.Write("\nDigite a posição de destino da peça que você está movendo: ");
                     Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
 
