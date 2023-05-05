@@ -39,13 +39,6 @@ namespace xadrez
                 mat[posicao.linha, posicao.coluna] = true;
             }
 
-            posicao.definirValores(posicao.linha - 1, posicao.coluna + 1);
-
-            if (tab.posicaoValida(posicao) && podeMover(posicao))
-            {
-                mat[posicao.linha, posicao.coluna] = true;
-            }
-
             posicao.definirValores(posicao.linha, posicao.coluna + 1);
 
             if (tab.posicaoValida(posicao) && podeMover(posicao))
@@ -87,7 +80,6 @@ namespace xadrez
             {
                 mat[posicao.linha, posicao.coluna] = true;
             }
-
             return mat;
         }
     }
